@@ -8,10 +8,10 @@ import { router } from './routes'
 const PORT = process.env.PORT || 3005
 const app = express()
 
-app.use(cors())
-
 dbConnect()
 
+app.use(cors())
+app.use(express.json())
 app.use(router)
 
 app.listen(PORT, () => {

@@ -1,9 +1,12 @@
 import { Request, Router, Response } from 'express'
+import { getItems, getItem, postItem, updateItem, deleteItem } from '../controllers/item'
 
 const router = Router()
 
-router.get('/items', (_req: Request, res: Response) => {
-    res.send({ data: 'Aqui van los modelos' })
-})
+router.get("/", getItems)
+router.get("/:id", getItem)
+router.post("/", postItem)
+router.put("/", updateItem)
+router.delete("/", deleteItem)
 
 export { router }
