@@ -1,4 +1,4 @@
-import { Request, Router, Response } from 'express'
+import { Router } from 'express'
 import { getBlog, getBlogs, postBlog, updateBlog, deleteBlog } from '../controllers/blog'
 
 const router = Router()
